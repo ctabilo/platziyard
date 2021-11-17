@@ -77,9 +77,28 @@
            margin-bottom: 10px;
         }
         .primary-button {
-            background-color: var();
+            background-color: var(--hospital-green);
+            border-radius: 10px;
+            border:none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
         }
 
+        .login-button {
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width:640px) {
+            .logo {
+                display: block;
+               
+            }
+        }
     </style>
 </head>
 <body>
@@ -94,7 +113,7 @@
                 <input type="password" id="password" placeholder="********" class="input input-psw">
                 <label for="nuevo-password" class="label">Nuevo Password</label>
                 <input type="password" id="nuevo-password" placeholder="********" class="input input-psw">
-                <input type="submit" value="Confirmar" class="primay-button">
+                <input type="submit" value="Confirmar" class="primary-button login-button">
 
             </form>
 
