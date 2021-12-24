@@ -25,12 +25,17 @@
             margin: 0;
             font-family: 'Quicksand', sans-serif;
         }
+        .title {
+            font-size: var(--lg);
+            font-weight: bold;
+        }
 
         .product-detail {
             width: 360px;
-            padding-bottom: 24px;
+            padding: 24px;
             position: absolute;
             right: 0;
+            box-sizing: border-box;
         }
 
 
@@ -53,6 +58,82 @@
 
         }
 
+        .title-container {
+            display: flex;
+            align-items: center;
+
+        }
+        
+        .title-container img {
+            margin-right: 14px;
+            transform: rotate(180deg);            
+        }
+        .my-order-content {
+            display: flex;
+            flex-direction: column;
+
+        }
+        .order {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 16px;
+            align-items: center;
+            background-color: var(--text-input-field);
+            margin-bottom: 24px;
+            border-radius: 20px;
+            padding: 0 24 px;
+
+
+        }
+
+        .order p span:nth-child(1) {
+            font-size: var(--md);
+            font-weight: bold;
+        }
+
+        .order p:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .order p:nth-child(2) {
+            text-align: end;
+            font-weight: bold;
+
+        }
+
+        .shoping-cart {
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
+            gap: 16px;
+            margin-bottom: 24px;
+            align-items: center;
+            
+        }
+
+        .shoping-cart figure {
+            margin: 0;
+            
+        }
+
+        .shoping-cart figure img{
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            object-fit: cover;
+
+        }
+
+        .shoping-cart p:nth-child(2){
+            color: var(--very-light-pink);
+
+        }
+        .shoping-cart p:nth-child(3){
+            font-size: var(--md);
+            font-weight: bold;
+        }
+
         @media (max-width:640px) {
             .product-detail {
                 width: 100%;
@@ -63,41 +144,51 @@
 
 <body>
     <aside class="product-detail">
-        <div class="my-order">
-            <div class="my-order-container">
-                <h1 class="title">My Order</h1>
-                <div class="my-order-content">
-                    <div class="order">
-                        <p>
-                            <span>03-25-2021</span>
-                            <span>6 articles</span>
-                        </p>
-                        <p>$560.00</p>
-                    </div>
-                </div>
         
-                <div class="shoping-cart">
-                    <figure>
-                        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                            alt="bike">
-                    </figure>
-                    <p>Bike</p>
-                    <p>$300</p>
-                </div>
-        
-                <div class="shoping-cart">
-                    <figure>
-                        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                            alt="bike">
-                    </figure>
-                    <p>Bike</p>
-                    <p>$300</p>
-                </div>
-        
-                
+        <div class="my-order-content">
+            <div class="title-container">
+                <img src="./icons/flechita.svg" alt="arrow">
+                <p class="title">My Order</p>
             </div>
-        
+            
+            <div class="shoping-cart">
+                <figure>
+                    <img src="https://s1.eestatic.com/2021/08/23/como/606450001_201130543_1024x576.jpg"
+                        alt="bike">
+                </figure>
+                <p>Bike</p>
+                <p>$300</p>
+                <img src="./icons/icon_close.png" alt="">
+            </div>
+
+            <div class="shoping-cart">
+                <figure>
+                    <img src="https://s1.eestatic.com/2021/08/23/como/606450001_201130543_1024x576.jpg"
+                        alt="bike">
+                </figure>
+                <p>Bike</p>
+                <p>$300</p>
+                <img src="./icons/icon_close.png" alt="">
+            </div>
+
+            <div class="shoping-cart">
+                <figure>
+                    <img src="https://s1.eestatic.com/2021/08/23/como/606450001_201130543_1024x576.jpg" alt="bike">
+                </figure>
+                <p>Bike</p>
+                <p>$300</p>
+                <img src="./icons/icon_close.png" alt="">
+            </div>
         </div>
+        <div class="order">
+            <p>
+                <span>Total</span>
+            </p>
+            <p>$560.00</p>
+        </div>
+        <button class="primary-button add-to-cart-button">
+            Checkout
+        </button>
     </aside>
 </body>
 
